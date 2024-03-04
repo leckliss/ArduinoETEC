@@ -1,0 +1,6 @@
+use clientes;
+create database db_teste_injection;
+use db_teste_injection;
+
+create table usuario(id int auto_increment,nome varchar(10),senha varchar(15),constraint pk_usuario primary key(id));
+insert into usuario(nome,senha)values('marcos','123456'),('joca','654321');
